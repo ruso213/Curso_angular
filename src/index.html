@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>MyStoreWscss</title>
+  
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -10,4 +11,32 @@
 <body>
   <app-root></app-root>
 </body>
+<style>
+    body{
+      margin: auto;
+      padding: auto;
+    }
+    body::-webkit-scrollbar{
+      width: .8vw;
+      background: linear-gradient(220.55deg, #EAEAEA 0%, #8B8B8B 100%);   
+    } 
+    body::-webkit-scrollbar-thumb{
+        width: 2px;
+        background: linear-gradient(220.55deg, #272727 10%, #626362 100%);   
+        border-radius: 4px;
+        border:#41403f ;
+    }
+    body::-webkit-scrollbar-thumb:hover{
+        width: 3px;
+        background-color: #e4a744;
+        border-radius: 4px;
+
+    }
+    body::-webkit-scrollbar-thumb:active{
+        width: 3px;
+        background-color: #c29040;
+        border-radius: 4px;
+
+    }
+</style>
 </html>
