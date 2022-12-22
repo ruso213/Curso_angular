@@ -1,12 +1,13 @@
 import { isNgTemplate } from '@angular/compiler';
 import { Component } from '@angular/core';
-import { productos } from './types';
+import { count, productos } from './types';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'my_storeWscss';
   img = `https://www.w3schools.com/howto/img_avatar.png`
@@ -17,6 +18,13 @@ export class AppComponent {
   };
   names : string[] =[`rodrigo`, `marco` , `eduardo`] 
   NewNames = ``
+
+  count : count = {
+    name: ``,
+    password : ``,
+    gmail:``
+  }
+
   productos :productos =
       {
         nombre : 'manzana',
@@ -61,6 +69,10 @@ export class AppComponent {
       
     }
   ]
+  onRegister(){
+    console.log(this.count);
+    
+  }
   addProducts(){
     let nombres = this.productos.nombre
     let precios = this.productos.precio
@@ -90,7 +102,10 @@ export class AppComponent {
     }
       this.productos.nombre = ``
   }
-  
+  changeCategory(){
+    
+        
+  }
   toggleButton(){
       this.btnDisabled = !this.btnDisabled
   }

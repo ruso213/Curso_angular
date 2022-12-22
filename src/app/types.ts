@@ -4,3 +4,8 @@ export interface productos {
     existencias: number
     image : string
 }
+export interface count {
+    name : string
+    gmail: string
+    password: string
+}

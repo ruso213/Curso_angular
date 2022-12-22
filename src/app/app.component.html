@@ -88,10 +88,10 @@
       <p class="P2">Store</p>
     </div>
     <div class="Super_third_Div_Intern">
-      <button>All</button>
-      <button disabled >Clothes</button>
-      <button disabled>Food</button>
-      <button disabled>Electronics</button>
+      <button class="Super_third_Div_Intern_button" (click)="changeCategory()">All</button>
+      <button class="Super_third_Div_Intern_button"  >Clothes</button>
+      <button class="Super_third_Div_Intern_button" >Food</button>
+      <button class="Super_third_Div_Intern_button" >Electronics</button>
     </div>
     <div class="Mygmail">
       <p>rodrigoibarramzt@gmail.com</p>
@@ -117,3 +117,63 @@
   </div>
 </div>
 
+
+
+
+<div class="Principal_Div_Form_Container">
+  <div class="Header_Form_Container">
+    <p>Practica formulario con Angular </p>
+    <div class="Second_Header_Form_Container">
+      <button>Register <img height="17px" src="../assets/person-add-svgrepo-com.svg" alt=""></button>
+      <button>Login <img height="17px" src="../assets/login-svgrepo-com.svg" alt=""></button>
+    </div>
+  </div>
+  <div class="Second_Div_Form_Container">
+    
+    <div class="target">
+
+   
+      <p class="Text_Principal">User Register</p>
+      
+      <form (ngSubmit)="onRegister()" #MyForm="ngForm" class="Form_Regiter">      
+        
+        <div>
+          <p>
+            Name
+          </p>
+          <input name="Name" required #Input1="ngModel" [(ngModel)]='count.name' type="text">
+          <p  [class.Invalido]="Input1.invalid" class="Required">
+              This field is required
+          </p>
+        </div>
+
+        <div>
+          <p>
+            Email
+          </p>
+          <input name="Email" required #Input2="ngModel" [(ngModel)]="count.gmail" type="email">
+          <p [class.Invalido]="Input2.invalid" class="Required" >
+            This field is required
+          </p>
+        </div>
+
+        <div>
+          <p>
+            Password
+          </p>
+          <input name='Password'type="password" required #Input4="ngModel" [(ngModel)]="count.password" >
+          <p [class.Invalido]="Input4.invalid" class="Required"  >
+            This field is required
+          </p>
+          
+        </div>
+
+
+          <div  class="Div_Button_Register">
+            <button  [disabled]="MyForm.invalid" class="Button_Register" type="submit" > Register </button>
+          </div>
+
+        </form>
+    </div>
+  </div>
+</div>

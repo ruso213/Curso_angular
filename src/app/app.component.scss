@@ -1,10 +1,49 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
+body{
+    background: linear-gradient(220.55deg, #EAEAEA 0%, #8B8B8B 100%);   
+    font-family: 'Montserrat', sans-serif;;
+    margin: 0px;
+    padding: 1vw;
+}
+
+
+button{
+    border-radius: 10px;
+    padding: .2vw;
+    border: 1px solid  black;
+    transition-duration: .2s;
+}
+button:hover{
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+input{
+    border-radius: 10px;
+    border: 1px solid;
+    margin:0vw ;
+    padding: 0vw;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+
+
+
+
+/* tiendita VVVVVVVVVVV */
+
+
 .Super_third_Div_Intern{
-    button{
+    .Super_third_Div_Intern_button{
         border: none;
         margin: 0px 15px;
         padding: 10px;
@@ -12,7 +51,9 @@
         box-shadow: 2px 2px 12px 6px rgba(0, 0, 0, 0.24);
         background-color: #f8f8eb;
         cursor: pointer;
-    }:hover{
+        
+    }
+    .Super_third_Div_Intern_button:hover{
         color: black;
         background-color: #d6d6cf;
     }
@@ -211,31 +252,112 @@
     }
 }
 
-body{
-    background: linear-gradient(220.55deg, #EAEAEA 0%, #8B8B8B 100%);   
-    font-family: 'Montserrat', sans-serif;;
-    margin: 0px;
-    padding: 1vw;
-}
 
 
-button{
-    border-radius: 10px;
-    padding: .2vw;
-    border: 1px solid  black;
-    transition-duration: .2s;
-}
-button:hover{
-    background-color: rgb(41, 41, 41);
-    color: white;
-}
-input{
-    border-radius: 10px;
-    border: 1px solid;
-    margin:0vw ;
-    padding: 0vw;
-}
+/* formulario  VVVVVVVVV*/
 
-li{
-    list-style: none;
+.Principal_Div_Form_Container{
+    display: flex;
+    font-family: sans-serif;
+    flex-direction: column;
+}
+.Header_Form_Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #1b1e22;
+    padding: 30px 0;
+    p{
+        font-size: 20px;
+        color: white;
+    }
+    .Second_Header_Form_Container{
+        display: flex;
+        gap: 10px;
+        button{
+            text-align: center;
+            display: flex;
+            font-size: 15px;
+            gap: 4px;
+            padding: 7px;
+            align-items: center;
+            background-color: #fec02f;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover{
+            color: black;
+            background-color:#cc9b28 ;
+        }
+
+    }
+}
+.target{
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin: 50px 0;
+    background-color: rgb(253, 241, 218);
+
+}
+.Second_Div_Form_Container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(220.55deg, #fcf081d7 0%, #fd91d0e0 100%);
+
+
+    .Text_Principal{
+        font-size: 50px;
+    }
+    .Form_Regiter{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+        .Required{
+            opacity: 0; 
+            transition-duration: .2s;
+           
+            &.Invalido{
+                color: rgb(255, 71, 0);
+                opacity: 1; 
+            }
+        }
+        
+        div{
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+        input{
+            font-size: 17px;
+            padding: 5px ;
+            width: 300px;
+            border-radius: 4px;
+            border: 1px solid rgba(128, 128, 128, 0.603);
+        }
+        
+        .Div_Button_Register{
+            display: flex;
+            flex-direction: row;
+            button{
+                background-color: #6ba4fb;
+                padding: 10px;
+                font-size: 14px;
+                border: none;
+                border-radius: 5px;
+                color: white;
+            }:hover{
+                background-color: #0c6dff;
+
+            }
+            
+        }
+
+    }
 }
